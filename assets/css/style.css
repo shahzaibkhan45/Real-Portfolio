@@ -1,0 +1,212 @@
+/* LIGHT MODE */
+:root{
+    --bg-color:#ffffff;
+    --surface-color:#f8f7ff;
+    --card-color:#ffffff;
+
+    --heading-color:#1f2937;
+    --text-color:#4b5563;
+    --text-light:#6b7280;
+
+    --primary-color:#7c3aed;
+    --primary-hover:#6d28d9;
+    --secondary-color:#a78bfa;
+
+    --border-color:#e5e7eb;
+    --shadow:rgba(0,0,0,.08);
+}
+
+/* DARK MODE */
+body.dark{
+    --bg-color:#0f0b1f;
+    --surface-color:#17112d;
+    --card-color:#21173d;
+
+    --heading-color:#f8f7ff;
+    --text-color:#d8d3ff;
+    --text-light:#a8a2d8;
+
+    --primary-color:#a78bfa;
+    --primary-hover:#8b5cf6;
+    --secondary-color:#c4b5fd;
+
+    --border-color:#34295f;
+    --shadow:rgba(0,0,0,.35);
+}
+body{
+    background-color:var(--bg-color);
+    color:var(--text-color);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+/* header nav */
+header nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:1.5rem;
+    background-color:var(--surface-color);
+    color:var(--text-color);
+    padding:25px 30px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+}
+.logo a{
+    text-decoration:none;
+    color:var(--primary-color);
+    font-weight:900;
+    font-size:1.8rem;
+}
+.nav-links ul{
+    display:flex;
+    gap:20px;
+}
+.nav-links ul li{
+list-style-type:none;
+}
+.nav-links ul li a{
+    text-decoration:none;
+    color:var(--text-color);
+    font-weight:600;
+}
+.nav-links ul li{
+    list-style: none;
+    position: relative;
+    margin-left: 10px;
+}
+
+.nav-links ul li::before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+
+    position: absolute;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+
+    transition: .3s;
+}
+
+.nav-links ul li:hover::before{
+    transform: translateY(-50%) scale(1);
+}
+
+.nav-links ul li:hover a{
+    color: var(--primary-color);
+}
+.nav-links ul li:has(a.active)::before{
+    transform: translateY(-50%) scale(1);
+}
+
+.nav-links ul li a.active{
+    color: var(--primary-color);
+}
+.darkMode{
+    span{
+        font-size:1.5rem;
+        color:var(--text-color);
+        cursor:pointer;
+    }
+}
+.darkMode:hover{
+    span{
+        color:var(--primary-color);
+    }
+}
+#main{
+  margin-top: 100px;
+}
+/* hero section */
+.hero-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:80vh;
+    /* padding: 100px 50px 50px 50px; */
+    gap: 50px;
+    margin: 0 200px;
+}
+/* hero image */
+.hero-image-section {
+   display: flex;
+   justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.hero-image img{
+    height: 400px;
+   background-color: var(--surface-color);
+   box-shadow: 0 0px 30px var(--primary-color);
+   border-radius: 20%;
+   border: 1px solid var(--primary-color);
+
+}
+.account-links{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+.account-link a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: 0.5s;
+}
+.account-link a:hover{
+    color: var(--primary-color);
+}
+/* content section */
+.name {
+  color: var(--primary-color);
+}
+#typing {
+  color: var(--primary-color);
+  border-right: 2px solid white;
+  white-space: nowrap;
+}
+.hero-content{
+    display: grid;
+font-size:1.5rem;
+gap:10px;
+}
+.hero-btn{
+display:flex;
+gap:20px;
+}
+.hero-btn a{
+    text-decoration:none;
+    color:var(--text-color);
+    font-weight:600;
+    padding:10px 20px;
+    border:1px solid var(--primary-color);
+    border-radius:5px;
+}
+.hero-btn a:first-child{
+    background-color:var(--primary-color);
+    color:var(--surface-color);
+    transition: 0.5s;
+}
+.hero-btn a:first-child:hover{
+    background-color: transparent;
+   color: var(--text-color)
+}
+.hero-btn a:last-child{
+    transition: 0.5s;
+    /* background-color: var(--primary-color); */
+
+    
+}
+.hero-btn a:last-child:hover{
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+    transition: 0.5s;
+}
