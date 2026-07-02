@@ -24,25 +24,23 @@
 //   navToggle.classList.remove("hide-toggle");
 // })
 // });
-
-
-// window.onscroll = function () {
-//   let sections = document.querySelectorAll("section");
-//   let scroll = window.scrollY;
+window.onscroll = function () {
+  let sections = document.querySelectorAll(".section");
+  let scroll = window.scrollY;
   
-//   sections.forEach(sec => {
-//     if (scroll >= sec.offsetTop - 200 && scroll < sec.offsetTop + sec.offsetHeight) {
+  sections.forEach(sec => {
+    if (scroll >= sec.offsetTop - 200 && scroll < sec.offsetTop + sec.offsetHeight) {
       
-//       document.querySelectorAll(".nav_list a").forEach(a => a.classList.remove("active"));
+      document.querySelectorAll(".nav-links ul li a").forEach(a => a.classList.remove("active"));
       
-//       document.querySelector('.nav_list a[href="#' + sec.id + '"]').classList.add("active");
-//     }
-//   });
-// };
+      document.querySelector('.nav-links ul li a[href="#' + sec.id + '"]').classList.add("active");
+    }
+  });
+};
 
 
     let typed = new Typed("#typing" ,{
-        strings :["Web Developer","Web Designer","Full Stack Developer"],
+        strings :["Web Developer","Web Designer","Fronten Developer"],
         typeSpeed : 100,
         backSpeed : 50,
         loop:true
