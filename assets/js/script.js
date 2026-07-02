@@ -47,3 +47,29 @@
         backSpeed : 50,
         loop:true
     })
+
+    // Dark Mode
+const darkModeBtn = document.getElementById("darkMode");
+const body = document.body;
+const icon = darkModeBtn.querySelector("i");
+
+// Load saved theme
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark");
+    icon.classList.remove("bi-moon-fill");
+    icon.classList.add("bi-sun-fill");
+}
+
+darkModeBtn.addEventListener("click", () => {
+    body.classList.toggle("dark");
+
+    if (body.classList.contains("dark")) {
+        icon.classList.remove("bi-moon-fill");
+        icon.classList.add("bi-sun-fill");
+        localStorage.setItem("theme", "dark");
+    } else {
+        icon.classList.remove("bi-sun-fill");
+        icon.classList.add("bi-moon-fill");
+        localStorage.setItem("theme", "light");
+    }
+});
