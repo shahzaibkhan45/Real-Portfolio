@@ -10,6 +10,7 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
+    <div id="toast" class="toast" hidden></div>
     <header id="header" class="header">
         <nav>
             <div class="logo">
@@ -53,7 +54,7 @@
             <p>I'm a passionate web developer with a love for creating beautiful and functional websites.</p>
             <div class="hero-btn">
             <a href="#" class="btn">Download Cv</a>
-            <a href="#" class="btn">Projects</a>
+            <a href="#projects" class="btn">Projects</a>
             </div>
         </div>
     </section>
@@ -187,8 +188,11 @@
             <div class="skills-container">
                 <div class="skill">
                     <div class="skill-text">
-                    <h3>HTML</h3>
-                     <span>0%</span>
+                        <h3>HTML</h3>
+                        <div class="language">
+                     <span id="html">0</span>
+                     <span>%</span>
+                     </div>
                      </div>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 95%;"></div>
@@ -198,7 +202,10 @@
                 <div class="skill">
                                         <div class="skill-text">
                     <h3>CSS</h3>
-                     <span>0%</span>
+                    <div class="language">
+                     <span id="css">0</span>
+                        <span>%</span>
+                        </div>
                      </div>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 85%;"></div>
@@ -207,7 +214,10 @@
                 <div class="skill">
                                       <div class="skill-text">
                     <h3>JAVASCRIPT</h3>
-                     <span>0%</span>
+                    <div class="language">
+                     <span id="javascript">0</span>
+                        <span>%</span>
+                        </div>
                      </div>
 
                     <div class="skill-bar">
@@ -217,7 +227,10 @@
                 <div class="skill">
                                        <div class="skill-text">
                     <h3>BOOTSTRAP</h3>
-                     <span>0%</span>
+                    <div class="language">
+                     <span id="bootstrap">0</span>
+                     <span>%</span>
+                     </div>
                      </div>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 85%;"></div>
@@ -227,15 +240,16 @@
             </div>
             
         </section>
-        <!-- <section class="project-section section projects" id="projects">
-            <h1>Feature Projects</h1>
+        <section class="project-section section projects reveal" id="projects">
+            <h1>Projects</h1>
             <div class="projects-main">
-                <div class="projects"><img src="./assets/img/image7.png"></div>
-                <div class="projects"><img src="./assets/img/image8.png"></div>
-                <div class="projects"><img src="./assets/img/image.png"></div>
+                <div class="projects"><img src="./assets/img/project1.jpg.png"></div>
+                <div class="projects"><img src="./assets/img/project2.jgp.png"></div>
+                    <div class="projects"><img src="./assets/img/project3.jpg.png"></div>
 
             </div>
-        </section> -->
+            <h2>More Projects Coming Soon...</h2>
+        </section>
         <section id="contact" class="contact contact-section section reveal">
             <h1><span>Contact</span> Me</h1>
             <div class="contact-container">
@@ -252,15 +266,19 @@
                 </div>
                 <div class="contact-form">
                     <h1>Contact Form</h1>
-                    <form action="#" method="post">
-                       <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    <form action="#" method="post" id="contact-form">
+                       <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                         <button type="submit">Send Message</button>
+                        </form>
                 </div>
         </section>
     </main>
     <footer id="footer" class="footer"></footer>
+    <!-- email js -->
+     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <!-- typed js -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js"></script>
 <!-- external script -->
