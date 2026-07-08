@@ -120,7 +120,21 @@ startCounter("css", 85, 20);
 startCounter("javascript", 60, 20);
 startCounter("bootstrap", 90, 20);
 startCounter("user-research", 90 , 20)
-startCounter("information-architecture", 70 , 20)
+startCounter("information-architecture", 70 , 20);
+startCounter("wireframing", 65 , 20);
+startCounter("prototyping", 75 , 20);
+startCounter("usability-testing", 85 , 20);
+startCounter("visual-design", 80 , 20);
+startCounter("interaction-design", 90 , 20);
+startCounter("layout-design", 90 , 20);
+startCounter("design-systems", 90 , 20);
+startCounter("responsive-design", 85 , 20);
+startCounter("team-collaboration", 70 , 20);
+startCounter("workshop-facilitation", 60 , 20);
+startCounter("design-handoff", 70 , 20);
+startCounter("client-communication", 50 , 20);
+startCounter("agile-workflow", 60 , 20);
+
 // accordion button
 const accordionButtons = document.querySelectorAll(".accordion-btn button");
 accordionButtons.forEach(button => {
@@ -180,7 +194,7 @@ if (form) {
         )
             .then(function () {
                 toast.hidden = false;
-                toast.innerHTML = "Form submitted successfully âœ…";
+                toast.innerHTML = "Form submitted successfully";
                 toast.classList.add("show");
                 setTimeout(() => {
                     toast.classList.remove("show");
@@ -279,12 +293,12 @@ document.querySelectorAll('.nav-links a, .logo a').forEach(link => {
         }
     });
 });
-const section = document.querySelectorAll("section");
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener("click", function () {
-        section.classList.add(".remove");
-    })
-});
+// const section = document.querySelectorAll("section");
+// document.querySelectorAll('.nav-links a').forEach(link => {
+//     link.addEventListener("click", function () {
+//         section.classList.add(".remove");
+//     })
+// });
 
 const sections = document.querySelectorAll(
 "#home,#about,#services,#skills,#education,#contact"
@@ -305,4 +319,58 @@ links.forEach(link => {
         }
 
     });
+});
+
+const track = document.querySelector(".tool-main");
+
+// Duplicate all tools once
+track.innerHTML += track.innerHTML;
+
+
+const btns = document.querySelectorAll(".pro-on-btn");
+
+btns.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+        const card = btn.closest(".project");
+        const img = card.querySelector(".project-img img");
+
+        const move = img.offsetHeight - card.querySelector(".project-img").offsetHeight;
+
+        img.style.transform = `translateY(-${move}px)`;
+
+        // 5 second baad wapas upar
+        setTimeout(() => {
+            img.style.transform = "translateY(0)";
+        }, 5000);
+
+    });
+
+});
+
+const progressBars = document.querySelectorAll(".skill-progress");
+
+const progressObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            const progress = entry.target;
+
+            progress.style.width = progress.dataset.width;
+            progress.classList.add("activeProgress");
+
+            progressObserver.unobserve(progress);
+        }
+
+    });
+
+}, {
+    threshold: 0.4
+});
+
+progressBars.forEach(bar => {
+    progressObserver.observe(bar);
 });

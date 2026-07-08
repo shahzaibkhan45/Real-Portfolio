@@ -11,6 +11,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <!-- remix icon -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <div id="toast" class="toast" hidden></div>
@@ -20,6 +22,10 @@
                     <a href="#home">Portfolio</a>
                     </div>
                     <div class="nav-links">
+                        <div class="close" id="close">
+                        <i class="ri-close-large-fill"></i>
+                        </div>
+                        <div class="nav">
                         <ul>
                             <li><a href="#home">Home</a></li>
                             <li><a href="#about">About</a></li>
@@ -29,9 +35,15 @@
                             <li><a href="#projects">Projects</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
+                        </div>
                     </div>
+                    <div class="right">
                     <div class="darkMode" id="darkMode">
                         <span class="darkMode-icon"><i class="bi bi-moon-fill"></i></span>
+                    </div>
+                    <div class="toggle" id="toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
                     </div>
             </nav>
         </header>
@@ -144,7 +156,7 @@
                 <p>Hi, I'm Muhammad Shahzaib Khan, a passionate Frontend Web Developer who enjoys creating modern, responsive, and user-friendly websites. I love turning ideas into clean and interactive web experiences with a strong focus on design, performance, and user experience.</p>
                 <p>I'm always eager to learn, take on new challenges, and build websites that are both visually appealing and functional.</p>
                 <div class="about-btn">
-                    <a href="./readMore.html" class="btn">Read More</a>
+                    <a href="./readMore.html" class="btn">Read More <i class="bi bi-arrow-down-right-circle"></i></a>
                 </div>
                 
             </div>
@@ -254,7 +266,7 @@
                         </div>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%;"></div>
+                        <div class="skill-progress" style="width: 90%;"></div>
                     </div>
                 </div>
 
@@ -269,7 +281,7 @@
                             </div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%;"></div>
+                            <div class="skill-progress" style="width: 70%;"></div>
                         </div>
                     </div>
 
@@ -282,7 +294,7 @@
                             </div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 60%;"></div>
+                            <div class="skill-progress" style="width: 65%;"></div>
                         </div>
                     </div>
 
@@ -295,7 +307,7 @@
                             </div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%;"></div>
+                            <div class="skill-progress" style="width: 80%;"></div>
                         </div>
                     </div>
 
@@ -308,7 +320,7 @@
                             </div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%;"></div>
+                            <div class="skill-progress" style="width: 85%;"></div>
                         </div>
                     </div>
 
@@ -331,7 +343,7 @@
                         </div>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%;"></div>
+                        <div class="skill-progress" style="width: 80%;"></div>
                     </div>
                 </div>
 
@@ -346,7 +358,7 @@
                             </div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%;"></div>
+                            <div class="skill-progress" style="width: 90%;"></div>
                         </div>
                     </div>
 
@@ -359,7 +371,7 @@
                             </div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 60%;"></div>
+                            <div class="skill-progress" style="width: 90%;"></div>
                         </div>
                     </div>
 
@@ -372,7 +384,7 @@
                             </div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%;"></div>
+                            <div class="skill-progress" style="width: 90%;"></div>
                         </div>
                     </div>
 
@@ -385,7 +397,7 @@
                             </div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%;"></div>
+                            <div class="skill-progress" style="width: 85%;"></div>
                         </div>
                     </div>
 
@@ -405,7 +417,7 @@
                         </div>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%;"></div>
+                        <div class="skill-progress" style="width: 70%;"></div>
                     </div>
                 </div>
 
@@ -420,7 +432,7 @@
                             </div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%;"></div>
+                            <div class="skill-progress" style="width: 60%;"></div>
                         </div>
                     </div>
 
@@ -433,7 +445,7 @@
                             </div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 60%;"></div>
+                            <div class="skill-progress" style="width: 70%;"></div>
                         </div>
                     </div>
 
@@ -446,7 +458,7 @@
                             </div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%;"></div>
+                            <div class="skill-progress" style="width: 50%;"></div>
                         </div>
                     </div>
 
@@ -459,7 +471,7 @@
                             </div>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%;"></div>
+                            <div class="skill-progress" style="width: 60%;"></div>
                         </div>
                     </div>
 
@@ -473,7 +485,7 @@
     </div> <!-- /.main-skill -->
             </section>
             <section id="education" class="section educ-section reveal">
-                <h1>Education</h1>
+                <h1>My Education</h1>
             
                 <div class="education-main">
                     <div class="main-education-container">
@@ -572,15 +584,64 @@
 
             </section>
             <section id="projects" class="project-section reveal section">
-                <div class="project-main">
-                    <div class="project">
-                        <div class="project-laptop">
-                            <img src="./assets/img/projectlaptop.png" alt="Project Laptop">
-                        </div>
-                        <div class="project-content">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint ut enim esse odio eaque voluptatibus.</p>
+                <h1>Projects</h1>
+              <div class="project-main">
+                <div class="project">
+                    <div class="project-img">
+                  <img src="./assets/img/longimgproject1.png">
+                  <!-- <div class="overlay">
+                    <a href="https://github.com/shahzaibkhan45/project-2/" target="_blank">Github Code <i class="bi bi-github"></i></a>
+                  </div> -->
                     </div>
+                    <div class="project-content">
+                        <button class="pro-on-btn">
+                          <img src="./assets/img/mouse-w.png">
+                        </button>
+                   <h3>PaRoz Project</h3>
+                   <p>A modern and responsive business website built with HTML, CSS, and JavaScript, featuring a clean UI and smooth user experience.</p>
+                    </div>
+                    <div class="pro-link">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                   </div>
                 </div>
+                <div class="project">
+                    <div class="project-img">
+                  <img src="./assets/img/_D__shahzaib_E-Commerce-Website_index.html.png">
+                  <!-- <div class="overlay">
+                    <a href="#" >Github Code <i class="bi bi-github"></i></a>
+                  </div> -->
+                    </div>
+                    <div class="project-content">
+                        <button class="pro-on-btn">
+                            <img src="./assets/img/mouse-w.png">
+                        </button>
+                   <h3>E-Commerce Project</h3>
+                   <p>A responsive online shopping interface featuring product listings, a shopping cart, and a clean user experience.</p>
+                </div>
+                <div class="pro-link">
+                 <i class="bi bi-box-arrow-up-right"></i>
+                </div>
+                </div>
+                <div class="project">
+                    <div class="project-img">
+                  <img src="./assets/img/_D__shahzaib_My-Portfolio_index.html (5).png">
+                  <!-- <div class="overlay">
+                    <a href="#" >Github Code <i class="bi bi-github"></i></a>
+                  </div> -->
+                    </div>
+                    <div class="project-content">
+                        <button class="pro-on-btn">
+                           <img src="./assets/img/mouse-w.png">
+                        </button>
+                   <h3>Portfolio Project</h3>
+                   <p>A modern, responsive portfolio website showcasing my skills, projects, and frontend expertise.</p>
+                    </div>
+                    <div class="pro-link">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                   </div>
+                </div>
+              </div>
+              <p>More Project coming soon...</p>
             </section>
             <section id="contact" class="contact contact-section section reveal">
                 <h1><span>Contact</span> Me</h1>
