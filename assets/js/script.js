@@ -374,3 +374,25 @@ const progressObserver = new IntersectionObserver((entries) => {
 progressBars.forEach(bar => {
     progressObserver.observe(bar);
 });
+
+// nav toggle
+const navMenu = document.querySelector(".nav");
+ const navToggle = document.getElementById("toggle");
+ const navClose = document.getElementById("close");
+
+ navToggle.addEventListener("click", function(){
+    navMenu.classList.toggle("navshow");
+
+ })
+ navClose.addEventListener("click", function(){
+    navMenu.classList.remove("navshow");
+
+ })
+ links.forEach((link)=>{
+     link.addEventListener("click", function(){
+        navMenu.classList.remove("navshow");
+    
+     })
+ })
+
+ 
