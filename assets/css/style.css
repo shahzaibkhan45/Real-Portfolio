@@ -1641,7 +1641,9 @@ gap:10px;
     }
     /* hero section */
     .hero-section{
+        min-height: auto;
         margin: 0 100px;
+        padding: 60px 0;
         font-size:1rem;
     }
     .hero-image img{
@@ -1649,8 +1651,10 @@ gap:10px;
     }
     /* about section */
     .about-section{
+        min-height: auto;
         /* margin: 160px 100px; */
-        margin: 0 100px;
+        margin: 10px 100px;
+          padding: 60px 0;
         font-size:1rem;
     }
     .about-img img{
@@ -1771,7 +1775,7 @@ margin: 0 auto;
         min-height:auto;
         height: auto;
         /* margin: 0 50px; */
-         padding:0 20px 100px 20px;
+         padding:0 20px;
     }
     .contact-container{
         gap: 10px;
@@ -1979,12 +1983,15 @@ font-size: 1.2rem;
     }
     .contact-container{
        flex-direction: column;
-       gap: 50px;
+       gap: 20px !important;
        width: 100%;
        align-items: stretch;
     }
     .contact-detail{
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* width: 100%; */
         /* max-width: 70px; */
         text-align: left;
         margin: 0 auto;
