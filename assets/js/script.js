@@ -227,31 +227,25 @@ if (form) {
 }
 
 const MainSidebar = document.querySelector(".main-side-bar");
-const sidebar = document.querySelector(".side-bar .account-link");
+const sidebar = document.querySelector(".side-bar");
 const home = document.getElementById("home");
 const sideBarClose = document.querySelector(".side-arrow-close");
-const sideBarOpen = document.querySelector(".side-arrow-open");
+// const sideBarOpen = document.querySelector(".side-arrow-open");
 
 
 window.addEventListener("scroll", () => {
     const homeBottom = home.offsetTop + home.offsetHeight - 100;
 
     if (window.scrollY >= homeBottom) {
-        MainSidebar.classList.add("show");
-        sideBarClose.addEventListener("click", function(){
-            // sideBarClose.classList.toggle("bi-arrow-right");
-         sidebar.style.display = "none";
-         sideBarOpen.style.display = "block";
-         sideBarOpen.addEventListener("click" , function(){
-             sidebar.style.display = "flex";
-              sideBarOpen.style.display = "none";
-         })
-        })
+        MainSidebar.classList.add("main-side-bar-show");
 
     } else {
-        MainSidebar.classList.remove("show");
+        MainSidebar.classList.remove("main-side-bar-show");
     }
 });
+ sideBarClose.addEventListener("click", function(){
+        sidebar.classList.toggle("side-bar-close");
+        })
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";

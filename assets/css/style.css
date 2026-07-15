@@ -545,53 +545,50 @@ background-color: var(--primary-color);
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    background-color: var(--surface-color);
-    padding: 20px;
+    padding-top: 5px;
+    /* gap: 20px; */
     margin-left: 10px;
-    border-radius: 10px;
+  
     z-index: 1000;
+}
+.main-side-bar-show{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
 }
 .side-arrow-open{
     display: none;
      font-size: 1.5rem;
       cursor: pointer;
+        background-color: var(--surface-color);
 }
 .side-arrow-close i{
     font-size: 1.5rem;
     /* color: var(--primary-color); */
     cursor: pointer;
 }
-.main-side-bar.show{
-    opacity: 1;
-    left: 0;
-    transition: 0.5s;
-    visibility: visible;
-}
-.account-link{
+
+.side-bar{
+    transition: 0.3s;
+    padding:10px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    gap: 10px;
+      border-radius: 10px;
+     background-color: var(--surface-color);
 }
-.side-bar .account-link{
-    display: flex;
-    flex-direction: column;
-
-}
-.account-link.remove-account{
-    right: -100%;
-    opacity: 0;
-    visibility:hidden;
-}
-.remove-account.main-side-bar{
-    padding: 0 !important;
+.side-bar-close{
+    transition: 0.3s;
+  left: -100%;
+  opacity: 0;
+  visibility: hidden;
+   background-color: none;
 }
 .side-bar .account-link a{
-    padding: 10px;
+    /* padding: 10px; */
     text-decoration: none;
     color: var(--text-color);
     font-size: 1.2rem;
@@ -742,9 +739,6 @@ background-color: var(--primary-color);
     background-color: var(--primary-color);
 
 }
-.cards:nth-child(3):hover{
-    background-color: var(--surface-color);
-}
 
 .cards:nth-child(4){
 
@@ -770,113 +764,88 @@ background-color: var(--primary-color);
 }
 
 .cards.active{
+    position: relative;
+    overflow: hidden;
 
-    background:linear-gradient(
-    135deg,
-    var(--primary-color),
-    #9b6cff);
+    background: var(--surface-color);
 
-    color:white;
+    color: white;
 
-    transform:
-    translateY(-40px)
-    scale(1.08);
+    transform: translateY(-40px) scale(1.08);
 
-    /* box-shadow:
-    0 25px 45px rgba(124,58,237,.45); */
-
-    z-index:10;
-
+    z-index: 10;
 }
-.cards:hover.active{
-    background-color: var(--surface-color);
+.cards.active::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        #9b6cff
+    );
+
+    z-index: 0;
+
+    transform-origin: bottom;
+    transform: scaleY(1);
+
+    transition: transform .5s ease;
 }
 
+.cards.active:hover::after{
+    transform: scaleY(0);
+}
 .cards.active h3,
 .cards.active p{
-
-    color:white;
-
+    position: relative;
+    z-index: 2;
+    color: white;
 }
 
-/* .cards:hover{
-
-    transform:
-    translateY(-50px)
-    scale(1.08);
-
-    background:var(--primary-color);
-
-    box-shadow:
-    0 25px 45px rgba(124,58,237,.35);
-
-    z-index:20;
-
-} */
-
+/* Baaki cards ka hover effect */
 .cards:hover h3,
 .cards:hover p{
-
-    color:white;
-
+    color: white;
 }
 
 .cards:hover::before{
-
-    height:100%;
-
-    opacity:.08;
-
+    height: 100%;
+    opacity: .08;
 }
 
+/* Animation */
 .cards{
-
-    animation:fadeUp .8s ease both;
-
+    animation: fadeUp .8s ease both;
 }
 
 .cards:nth-child(2){
-
-    animation-delay:.1s;
-
+    animation-delay: .1s;
 }
 
 .cards:nth-child(3){
-
-    animation-delay:.2s;
-
+    animation-delay: .2s;
 }
 
 .cards:nth-child(4){
-
-    animation-delay:.3s;
-
+    animation-delay: .3s;
 }
 
 .cards:nth-child(5){
-
-    animation-delay:.4s;
-
+    animation-delay: .4s;
 }
 
 @keyframes fadeUp{
-
     from{
-
-        opacity:0;
-
-        transform:translateY(100px);
-
+        opacity: 0;
+        transform: translateY(100px);
     }
 
     to{
-
-        opacity:1;
-
+        opacity: 1;
     }
-
 }
-
 /* image dashboard section */
 .image-dash{
  
