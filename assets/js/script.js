@@ -239,6 +239,7 @@ window.addEventListener("scroll", () => {
     if (window.scrollY >= homeBottom) {
         MainSidebar.classList.add("show");
         sideBarClose.addEventListener("click", function(){
+            // sideBarClose.classList.toggle("bi-arrow-right");
          sidebar.style.display = "none";
          sideBarOpen.style.display = "block";
          sideBarOpen.addEventListener("click" , function(){
@@ -255,7 +256,7 @@ window.addEventListener("scroll", () => {
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
 }
-
+if(document.querySelector("header nav")){
 const navHeight = document.querySelector("header nav").offsetHeight;
 
 function scrollToHash() {
@@ -272,6 +273,7 @@ function scrollToHash() {
         }
     }
 }
+
 
 // Scroll to hash on page load
 window.addEventListener("load", () => {
@@ -292,7 +294,6 @@ window.addEventListener("load", () => {
     }
 
 });
-
 // Scroll to hash when hash changes
 window.addEventListener("hashchange", scrollToHash);
 
@@ -311,6 +312,8 @@ document.querySelectorAll('.nav-links a, .logo a').forEach(link => {
         }
     });
 });
+}
+
 // const section = document.querySelectorAll("section");
 // document.querySelectorAll('.nav-links a').forEach(link => {
 //     link.addEventListener("click", function () {
@@ -339,10 +342,14 @@ links.forEach(link => {
     });
 });
 
+if(document.querySelector(".tool-main")){
+
 const track = document.querySelector(".tool-main");
 
 // Duplicate all tools once
 track.innerHTML += track.innerHTML;
+
+}
 
 
 const btns = document.querySelectorAll(".pro-on-btn");
@@ -397,7 +404,7 @@ progressBars.forEach(bar => {
 const navMenu = document.querySelector(".nav");
  const navToggle = document.getElementById("toggle");
  const navClose = document.getElementById("close");
-
+if(navMenu){
  navToggle.addEventListener("click", function(){
     navMenu.classList.toggle("navshow");
 
@@ -413,4 +420,4 @@ const navMenu = document.querySelector(".nav");
      })
  })
 
- 
+ }

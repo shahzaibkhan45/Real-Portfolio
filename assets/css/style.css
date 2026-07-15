@@ -580,6 +580,15 @@ background-color: var(--primary-color);
 .side-bar .account-link{
     display: flex;
     flex-direction: column;
+
+}
+.account-link.remove-account{
+    right: -100%;
+    opacity: 0;
+    visibility:hidden;
+}
+.remove-account.main-side-bar{
+    padding: 0 !important;
 }
 .side-bar .account-link a{
     padding: 10px;
@@ -1596,11 +1605,11 @@ gap:10px;
     text-decoration: none;
     font-size: 1.2rem;
     transition: 0.5s;
-    color: var(--surface-color);
-    background-color: var(--primary-color);
+    color: var(--text-color);
+    /* background-color: var(--primary-color); */
     padding: 10px 20px;
     border-radius: 5px;
-    border: 1px solid var(--primary-color);
+    /* border: 1px solid var(--primary-color); */
 }
 .back-button a:hover{
     background-color: transparent;
