@@ -551,7 +551,7 @@ background-color: var(--primary-color);
     padding-top: 5px;
     /* gap: 20px; */
     margin-left: 10px;
-  
+  /* background-color: var(--surface-color); */
     z-index: 1000;
 }
 .main-side-bar-show{
@@ -563,12 +563,15 @@ background-color: var(--primary-color);
     display: none;
      font-size: 1.5rem;
       cursor: pointer;
-        background-color: var(--surface-color);
+        background-color: var(--surface-color) !important;
 }
 .side-arrow-close i{
     font-size: 1.5rem;
     /* color: var(--primary-color); */
     cursor: pointer;
+      background-color: var(--surface-color) !important;
+      padding: 10px;
+      border-radius: 10px;
 }
 
 .side-bar{
@@ -769,7 +772,7 @@ background-color: var(--primary-color);
 
     background: var(--surface-color);
 
-    color: white;
+    color: black;
 
     transform: translateY(-40px) scale(1.08);
 
@@ -796,6 +799,13 @@ background-color: var(--primary-color);
 
 .cards.active:hover::after{
     transform: scaleY(0);
+    /* color: var(--text-color) */
+}
+.cards.active:hover.cards.active h3{
+    color: var(--text-color);
+}
+.cards.active:hover.cards.active p{
+    color: var(--text-color);
 }
 .cards.active h3,
 .cards.active p{
