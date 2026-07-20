@@ -1633,13 +1633,9 @@ gap:10px;
     }
     /* hero section */
     .hero-section{
-        /* min-height: auto; */
+        min-height: auto;
         margin: 0 100px;
-<<<<<<< Updated upstream
         padding: 100px 0;
-=======
-        /* padding: 60px 0; */
->>>>>>> Stashed changes
         font-size:1rem;
     }
     .hero-image img{
